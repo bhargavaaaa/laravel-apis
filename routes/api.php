@@ -5,6 +5,7 @@ use App\Http\Controllers\Api\v1\EncryptDecryptPDFController;
 use App\Http\Controllers\Api\v1\EncryptController;
 use App\Http\Controllers\Api\v1\EncryptImageController;
 use App\Http\Controllers\Api\v1\TokenManagementController;
+use App\Http\Middleware\VerifyToken;
 
 /*
 |--------------------------------------------------------------------------
