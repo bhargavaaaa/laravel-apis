@@ -29,7 +29,7 @@ Route::post('decryptDataImage', 'App\Http\Controllers\Api\v1\EncryptController@d
 */
 
 Route::group(["prefix" => "v1"], function () {
-    Route::post("generate-token", [TokenManagementController::class, "generateToken"]);
+    Route::post("generate-token", [TokenManagementController::class, "generateToken"])->middleware(VerifyToken::class);
 
     Route::group(['middleware' => 'checkauth'], function () {
         Route::post("encrypt-pdf", [EncryptDecryptPDFController::class, "encrypt_pdf"]);

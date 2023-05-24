@@ -31,7 +31,7 @@ class GenerateKeys extends Command
         $keys = [];
         for ($i = 0; $i < $count; $i++) {
             $keys[] = [
-                'key' => 'base64:'.base64_encode(Encrypter::generateKey(config('app.cipher'))),
+                'key' => str()->random(32),
                 'created_at' => now(),
                 'updated_at' => now()
             ];
